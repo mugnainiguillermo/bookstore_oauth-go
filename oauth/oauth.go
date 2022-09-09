@@ -63,7 +63,7 @@ func GetClientId(request *http.Request) int64 {
 	return clientId
 }
 
-func AuthenticateRequest(request *http.Request) *rest_errors.RestErr {
+func AuthenticateRequest(request *http.Request) rest_errors.RestErr {
 	if request == nil {
 		return nil
 	}
@@ -95,7 +95,7 @@ func cleanRequest(request *http.Request) {
 	request.Header.Del(headerXCallerId)
 }
 
-func getAccessToken(accessTokenId string) (*accessToken, *rest_errors.RestErr) {
+func getAccessToken(accessTokenId string) (*accessToken, rest_errors.RestErr) {
 	var at accessToken
 	var restErr rest_errors.RestErr
 
@@ -110,7 +110,7 @@ func getAccessToken(accessTokenId string) (*accessToken, *rest_errors.RestErr) {
 	}
 
 	if resp.IsError() {
-		return nil, &restErr
+		return nil, restErr
 	}
 
 	return &at, nil
