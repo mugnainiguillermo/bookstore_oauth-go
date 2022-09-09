@@ -28,9 +28,9 @@ func init() {
 }
 
 type accessToken struct {
-	Id       string `json:"id"`
-	UserId   string `json:"user_id"`
-	ClientId string `json:"client_id"`
+	Id      string `json:"access_token"`
+	UserId  int64  `json:"user_id"`
+	Expires int64  `json:"expires"`
 }
 
 func IsPublic(request *http.Request) bool {
@@ -71,8 +71,8 @@ func AuthenticateRequest(request *http.Request) rest_errors.RestErr {
 	cleanRequest(request)
 
 	accessTokenId := strings.TrimSpace(request.URL.Query().Get(parameterAccessToken))
-	if accessTokenId != "" {
-		return nil
+	if accessTokenId == "" {
+		return rest_errors.NewUnauthorizedError("invalid access token")
 	}
 
 	at, err := getAccessToken(accessTokenId)
@@ -80,7 +80,7 @@ func AuthenticateRequest(request *http.Request) rest_errors.RestErr {
 		return err
 	}
 
-	request.Header.Add(headerXClientId, fmt.Sprintf("%v", at.ClientId))
+	//request.Header.Add(headerXClientId, fmt.Sprintf("%v", at.ClientId))
 	request.Header.Add(headerXCallerId, fmt.Sprintf("%v", at.UserId))
 
 	return nil
