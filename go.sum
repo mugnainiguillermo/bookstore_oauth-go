@@ -1,8 +1,8 @@
 github.com/davecgh/go-spew v1.1.1 h1:vj9j/u1bqnvCEfJOwUhtlOARqs3+rkHYY13jYWTU97c=
 github.com/go-resty/resty/v2 v2.7.0 h1:me+K9p3uhSmXtrBZ4k9jcEAfJmuC8IivWHwaLZwPrFY=
 github.com/go-resty/resty/v2 v2.7.0/go.mod h1:9PWDzw47qPphMRFfhsyk0NnSgvluHcljSMVIq3w7q0I=
-github.com/mugnainiguillermo/bookstore_utils-go v0.0.2 h1:ylBlb+xo+PxObHCHE8Gikx1X43uBA9A0JzeOkVMJSwY=
-github.com/mugnainiguillermo/bookstore_utils-go v0.0.2/go.mod h1:P5QABrNyfDYDBczhdgymXmV984jkHIzmIOdQK7wPtb8=
+github.com/mugnainiguillermo/bookstore_utils-go v0.0.3 h1:AWcgU8prIvdZuHNN1tYRze8Tnfzt62Dg71ejWLFyjfs=
+github.com/mugnainiguillermo/bookstore_utils-go v0.0.3/go.mod h1:P5QABrNyfDYDBczhdgymXmV984jkHIzmIOdQK7wPtb8=
 github.com/pmezard/go-difflib v1.0.0 h1:4DBwDE0NGyQoBHbLQYPwSUPoCMWR5BEzIk/f1lZbAQM=
 github.com/stretchr/testify v1.8.0 h1:pSgiaMZlXftHpm5L7V1+rVB+AZJydKsMxsQBIJw4PKk=
 golang.org/x/net v0.0.0-20211029224645-99673261e6eb h1:pirldcYWx7rx7kE5r+9WsOXPXK0+WH5+uZ7uPmJ44uM=
